@@ -1,0 +1,31 @@
+.search-bar {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .input-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-container .placeholder {
+    color: #999;
+  }
+  
+  .triplets {
+    margin-top: 10px;
+  }
+  
+  .triplet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .triplet button {
+    margin-left: 10px;
+  }
