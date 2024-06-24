@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./styles.css";
 import Dropdown from "../dropDown";
 import { IoIosCloseCircle } from "react-icons/io";
 
@@ -9,8 +8,8 @@ const operations = ["equals", "contains", "starts with", "ends with"];
 
 const SearchBar = () => {
   const [triplets, setTriplets] = useState([]);
-  const [currentAttribute, setCurrentAttribute] = useState(null);
-  const [currentOperation, setCurrentOperation] = useState(null);
+  const [currentAttribute, setCurrentAttribute] = useState("");
+  const [currentOperation, setCurrentOperation] = useState("");
   const [currentValue, setCurrentValue] = useState("");
   const [showAttributes, setShowAttributes] = useState(false);
   const [showOperations, setShowOperations] = useState(false);
@@ -42,8 +41,9 @@ const SearchBar = () => {
           value: currentValue,
         },
       ]);
-      setCurrentAttribute(null);
-      setCurrentOperation(null);
+      setCurrentAttribute("");
+      setCurrentOperation("");
+      setCurrentValue("")
     }
   }, [currentAttribute, currentOperation, currentValue]);
 
@@ -52,7 +52,6 @@ const SearchBar = () => {
   };
 
   return (
-    // <div className="flex items-center justify-center">
       <div className="w-1/2">
         <div
           className="border rounded-lg mb-2 p-3"
@@ -91,7 +90,6 @@ const SearchBar = () => {
           ))}
         </div>
       </div>
-    // </div>
   );
 };
 
