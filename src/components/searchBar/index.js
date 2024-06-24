@@ -45,7 +45,7 @@ const SearchBar = () => {
       setCurrentOperation("");
       setCurrentValue("")
     }
-  }, [currentAttribute, currentOperation, currentValue]);
+  }, [currentAttribute, currentOperation, currentValue, triplets]);
 
   const handleDeleteTriplet = (index) => {
     setTriplets(triplets.filter((_, i) => i !== index));
